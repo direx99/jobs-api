@@ -9,7 +9,7 @@ router.route("/add").post((req,res)=>{
         name
     })
 
-    newLecturer.save().then(()=>{
+    newJob.save().then(()=>{
         res.json("Lecture added")
     }).catch((err)=>{
         console.log(err);
