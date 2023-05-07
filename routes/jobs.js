@@ -17,7 +17,7 @@ router.route("/add").post((req,res)=>{
 })
 
 
-router.route("/").get((req,res)=>{
+router.route("/private12131/").get((req,res)=>{
     Lecture.find().then((ecturers)=>{
         res.json(ecturers)
     }).catch((err)=>{
