@@ -2,16 +2,16 @@ const mongoose = require ('mongoose');
 
 const Schema = mongoose.Schema;
 
-const studentSchema = new Schema({
-    firstName:{
+const jobSchema = new Schema({
+    jobTitle:{
         type:String,
         required:true
     },
-    lastName:{
+    company:{
         type:String,
         required:true
     },
-    studentId:{
+    recuterName:{
         type:String,
         required:true
     },
