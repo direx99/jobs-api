@@ -28,8 +28,8 @@ connection.once('open',()=>{
 })
 
 
-const studentRouter=require("./routes/students.js")
-app.use("/student",studentRouter); 
+const jobRouter=require("./routes/jobs.js")
+app.use("/job",jobRouter); 
 
 
 app.listen(PORT,()=>{

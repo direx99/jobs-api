@@ -1,16 +1,31 @@
 const router = require("express").Router();
-let Student = require("../models/Lecturer");
+let Job = require("../models/Job");
 
-router.route("/add").post((req,res)=>{
-    const name = req.body.name;
-   
+router.route("/").post((req,res)=>{
+    const jobTitle = req.body.jobTitle;
+    const company = req.body.company;
+    const description = req.body.description;
+    const email = req.body.email;
+    const location = req.body.location;
+    const category = req.body.category;
+    const type = req.body.type;
+    const salary = req.body.salary;
+
     
-    const newLecturer = new Lecturer ({
-        name
+    const newJob = new Job ({
+        jobTitle,
+        company,
+        description,
+        email,
+        location,
+        category,
+        type,
+        salary
+    
     })
 
     newJob.save().then(()=>{
-        res.json("Lecture added")
+        res.json("New job added")
     }).catch((err)=>{
         console.log(err);
     })

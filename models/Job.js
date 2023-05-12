@@ -11,36 +11,30 @@ const jobSchema = new Schema({
         type:String,
         required:true
     },
-    recuterName:{
-        type:String,
-        required:true
-    },
-    nic:{
-        type:Number,
-        required:false
-    },
-    address:{
-        type:String,
-        required:true
-    },
-    telephone:{
+    description:{
         type:String,
         required:true
     },
     email:{
+        type:Number,
+        required:false
+    },
+    location:{
         type:String,
         required:true
     },
-    studentStatus:{
+    category:{
         type:String,
         required:true
     },
-
-
-
-
-
-
+    type:{
+        type:String,
+        required:true
+    },
+    salary:{
+        type:String,
+        required:true
+    }
 
 
 })
@@ -52,5 +46,5 @@ const jobSchema = new Schema({
 
 
 
-const Student = mongoose.model("Student",studentSchema);
-module.exports=Student;
+const Job = mongoose.model("Job",jobSchema);
+module.exports=Job;
